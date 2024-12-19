@@ -1,22 +1,22 @@
 def calculate_average():
     prices = []
-    print("Unesite cene (unesite 'kraj' da završite unos):")
+    print("Enter price: (end for stop)")
 
     while True:
-        user_input = input("Cena: ")
-        if user_input.lower() == 'kraj':
+        user_input = input("Price: ")
+        if user_input.lower() == 'end':
             break
         try:
             price = float(user_input)
             prices.append(price)
         except ValueError:
-            print("Molimo unesite važeći broj ili 'kraj' da završite.")
+            print("Enter number or END for stop")
 
     if prices:
         average_price = sum(prices) / len(prices)
-        print(f"Prosek unetih cena je: {average_price:.2f}")
+        print(f"Average price is: {average_price:.2f}")
     else:
-        print("Niste uneli nijednu cenu.")
+        print("You not enter any price.")
 
-# Pozivanje funkcije
+#call function
 calculate_average()
